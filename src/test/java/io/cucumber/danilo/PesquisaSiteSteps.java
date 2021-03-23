@@ -36,6 +36,6 @@ public class PesquisaSiteSteps {
 	
 	@Entao("devo acessar a pagina com resultados de busca")
 	public void devo_acessar_a_pagina_com_resultados_de_busca() {
-		WebElement input = browser.findElement( By.cssSelector(".div-card-aulas") );
+		browser.findElement( By.cssSelector(".div-card-aulas") );
 	}
 }
