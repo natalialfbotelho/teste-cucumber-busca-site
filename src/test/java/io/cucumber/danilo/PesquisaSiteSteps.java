@@ -1,5 +1,7 @@
 package io.cucumber.danilo;
 
+import static org.junit.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +38,6 @@ public class PesquisaSiteSteps {
 	
 	@Entao("devo acessar a pagina com resultados de busca")
 	public void devo_acessar_a_pagina_com_resultados_de_busca() {
-		browser.findElement( By.cssSelector(".div-card-aulas") );
+		assertEquals(true , browser.findElements( By.cssSelector(".div-card-aulas") ).size() > 0);
 	}
 }
