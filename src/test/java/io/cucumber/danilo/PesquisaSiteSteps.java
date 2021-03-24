@@ -39,5 +39,6 @@ public class PesquisaSiteSteps {
 	@Entao("devo acessar a pagina com resultados de busca")
 	public void devo_acessar_a_pagina_com_resultados_de_busca() {
 		assertEquals(true , browser.findElements( By.cssSelector(".div-card-aulas") ).size() > 0);
+		browser.quit();
 	}
 }
