@@ -20,24 +20,24 @@ public class PesquisaSiteSteps {
 	}
 
 	@Quando("eu acesso o site do tornese um programador")
-	public void eu_acesso_o_site_do_tornese_um_programador() {
+	public void entrandoNoSite() {
 	    browser.get("https://www.torneseumprogramador.com.br/");
 	}
 	
 	@Quando("digito no campo busca {string}")
-	public void digito_no_campo_busca(String string) {
+	public void buscaPorTexto(String string) {
 		WebElement input = browser.findElement( By.cssSelector("input[name='q']") );
 	    input.sendKeys(string);
 	}
 	
 	@Quando("clico no botao pesquisar")
-	public void clico_no_botao_pesquisar() {
+	public void clicandoNoBotaoDePesquisa() {
 		WebElement input = browser.findElement( By.cssSelector("button[class='btn btn-outline-dark btn-pesquisa']") );
 	    input.click();
 	}
 	
 	@Entao("devo acessar a pagina com resultados de busca")
-	public void devo_acessar_a_pagina_com_resultados_de_busca() {
+	public void validandoResultado() {
 		assertEquals(true , browser.findElements( By.cssSelector(".div-card-aulas") ).size() > 0);
 		browser.quit();
 	}
