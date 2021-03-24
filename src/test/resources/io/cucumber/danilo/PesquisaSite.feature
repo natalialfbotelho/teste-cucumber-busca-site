@@ -1,5 +1,4 @@
 # language: pt
-@ignore
 Funcionalidade: Pesquisa em site
   Devemos entrar no site e digitar palavras no campo de pesquisa
    
